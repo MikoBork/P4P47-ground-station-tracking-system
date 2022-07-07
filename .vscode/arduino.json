@@ -1,3 +1,6 @@
 {
-    "sketch": "p4p47-ground-station-tracking-system.ino"
+    "sketch": "p4p47-ground-station-tracking-system.ino",
+    "board": "arduino:avr:uno",
+    "port": "COM6",
+    "programmer": "arduino:avrisp"
 }
