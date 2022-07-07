@@ -30,11 +30,10 @@ void loop()
 	delay(1000);
 }
 
-int durationSteps(int speedRPM, int seconds) 
+float durationSteps(int speedRPM, int seconds) 
 {
     myStepper.setSpeed(speedRPM);
-    int revolutionPeriod = 1/(speedRPM/60);         // rpm to rps, then T = 1/rps
-    int revolutions = seconds/revolutionPeriod;     // duration/period for total revs
-    int steps = revolutions * stepsPerRevolution;   // how many steps motor must complete
+    float RPS = speedRPM/60;         // rpm to rps
+    float steps = seconds * RPS * stepsPerRevolution;   // how many steps motor must complete
     return steps;
 }
